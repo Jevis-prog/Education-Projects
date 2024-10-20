@@ -120,3 +120,7 @@ class ZooManagement:
         for an in zoo.animals:
             if an.name == name:
                 return an
+
+
+    def zzz(self):
+        pass
