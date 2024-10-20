@@ -24,15 +24,15 @@ class ZooManagement:
             print('\n6. Закрыть смену.')
             action = input('\nВыберите действие: ')
 
-            if action == '1': self.AddAnimal()
-            elif action == '2': self.Get_list_all_animals()
-            elif action == '3': self.Hire_an_employee()
-            elif action == '4': self.Show_list_all_employees()
-            elif action == '5': self.Show_another_actions()
+            if action == '1': self.add_animal()
+            elif action == '2': self.get_list_all_animals()
+            elif action == '3': self.hire_an_employee()
+            elif action == '4': self.show_list_all_employees()
+            elif action == '5': self.show_another_actions()
             elif action == '6': break
 
 
-    def AddAnimal(self) -> None:
+    def add_animal(self) -> None:
         name = input('Введите имя: ')
         species = input('Введите вид: ')
         age = int(input('Введите возраст: '))
@@ -53,12 +53,12 @@ class ZooManagement:
             print(new_animal.make_sound())
 
 
-    def Get_list_all_animals(self) -> None:
+    def get_list_all_animals(self) -> None:
         print('\nВот список всех животных:')
         print(zoo.get_animals())
 
 
-    def Hire_an_employee(self) -> None:
+    def hire_an_employee(self) -> None:
         name = input('Введите имя: ')
         age = int(input('Введите возраст: '))
         new_zookeeper = Zookeepers.Zookeeper(name, age)
@@ -66,12 +66,12 @@ class ZooManagement:
         print(f'\n{new_zookeeper.name}, добро пожаловать в зоопарк!\n')
 
 
-    def Show_list_all_employees(self) -> None:
+    def show_list_all_employees(self) -> None:
         print('\nВот список всех сотрудников:')
         print(zoo.get_zookeeper())
 
 
-    def Show_another_actions(self) -> None:
+    def show_another_actions(self) -> None:
         while True:
             print('\n1. Назначить сотрудника следить за животным.')
             print('2. Покормить животное.')
@@ -79,12 +79,12 @@ class ZooManagement:
 
             action = input('\nВыберите действие: ')
 
-            if action == '1': self.Responsible_for()
-            elif action == '2': self.Feed_animl()
+            if action == '1': self.responsible_for()
+            elif action == '2': self.feed_animl()
             elif action == '3': break
 
 
-    def Responsible_for(self) -> None:
+    def responsible_for(self) -> None:
         zookeeper_name = input('Введите имя сотрудника: ')
         animal_name = input('Введите имя животного: ')
 
@@ -97,7 +97,7 @@ class ZooManagement:
         else:
             print('\nСотрудник или животное не найдено.\n')
 
-    def Feed_animl(self) -> None:
+    def feed_animl(self) -> None:
         zookeeper_name = input('Введите имя сотрудника: ')
         animal_name = input('Введите имя животного: ')
 
