@@ -1,4 +1,5 @@
-from ZooManagement import ZooManagement
+from zoo_management import ZooManagement
+
 
 zoops = ZooManagement()
-zoops.start()
+zoops.select_action()

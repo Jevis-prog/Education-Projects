@@ -1,4 +1,4 @@
-from Animals import Animal
+from animal import Animal
 
 
 class Zookeeper:
@@ -24,3 +24,5 @@ class Zookeeper:
     def info(self) -> str:
         animal_names = ', '.join(animal.name for animal in self.lst_animal)
         return f'{self.name} ухаживает за {[animal_names]}'
+
+

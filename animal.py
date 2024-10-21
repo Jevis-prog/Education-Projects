@@ -1,4 +1,6 @@
-class Animal:
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
 
 
     def __init__(self, name: str, species: str, age: int) -> None:
@@ -6,9 +8,9 @@ class Animal:
         self.species = species
         self.age = age
 
-
+    @abstractmethod
     def make_sound(self) -> str:
-        return 'Издал звук'
+        pass
 
 
     def info(self) -> str:

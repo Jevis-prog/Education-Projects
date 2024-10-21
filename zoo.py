@@ -1,13 +1,13 @@
-from Animals import Animal
-from Zookeepers import Zookeeper
+from animal import Animal
+from zookeeper import Zookeeper
 
 
 class Zoo:
 
     def __init__(self, zoo_name: str) -> None:
         self.zoo_name = zoo_name
-        self.animals = []
-        self.zookeepers = []
+        self.animals: list[Animal] = []
+        self.zookeepers: list[Zookeeper] = []
 
 
     def get_animals(self) -> str:
