@@ -37,3 +37,16 @@ class Bird(Animal):
     def make_sound(self) -> str:
         return f'{self.name} говорит: чирик'
 
+class Elephant(Animal):
+
+    def make_sound(self) -> str:
+        return f'{self.name} говорит ФФФФ'
+class Bear(Animal):
+
+    def make_sound(self) -> str:
+        return f'{self.name} говорит: Уууу'
+
+class Hamster(Animal):
+
+    def make_sound(self) -> str:
+        return f'{self.name} говорит: фрфр'
