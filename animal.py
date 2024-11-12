@@ -36,3 +36,4 @@ class Bird(Animal):
 
     def make_sound(self) -> str:
         return f'{self.name} говорит: чирик'
+
