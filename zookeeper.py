@@ -8,8 +8,9 @@ class Zookeeper:
         self.name = name
         self.age = age
         if lst_animal is None:
-            lst_animal = []
-        self.lst_animal = lst_animal
+            self.lst_animal = []
+        else:
+            self.lst_animal = lst_animal
 
 
     def feed_animal(self, animal: Animal) -> str:
@@ -23,6 +24,8 @@ class Zookeeper:
 
     def info(self) -> str:
         animal_names = ', '.join(animal.name for animal in self.lst_animal)
-        return f'{self.name} ухаживает за {[animal_names]}'
+        return f'{animal_names}'
 
 
+    def __str__(self):
+        return self.info()

@@ -22,7 +22,7 @@ class Zoo:
         if not self.zookeepers:
             return '\nВ зоопарке пока нет сотрудников.\n'
 
-        zookeepers_info = [f'Имя: {zook.name}, Возраст: {zook.age}, Следит за: {zook.info}' for zook in self.zookeepers]
+        zookeepers_info = [f'Имя: {zook.name}, Возраст: {zook.age}, Следит за: {zook.info()}' for zook in self.zookeepers]
         return '\n'.join(zookeepers_info)
 
 
